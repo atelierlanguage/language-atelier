@@ -159,7 +159,13 @@
   .team-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
 
   #spotlights { background: white; }
-  .spotlight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; max-width: 860px; }
+  .spotlight-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 3rem; max-width: 1160px; }
+  @media (min-width: 641px) and (max-width: 999px) {
+    .spotlight-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1000px) {
+    .spotlight-grid { grid-template-columns: repeat(3, 1fr); }
+  }
   .spotlight-card { background: var(--cream); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
   .spotlight-card video { width: 100%; display: block; aspect-ratio: 4 / 3; object-fit: cover; background: #000; }
   .spotlight-card video.portrait { aspect-ratio: 9 / 16; }
